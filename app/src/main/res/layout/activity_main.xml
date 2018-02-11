@@ -9,7 +9,6 @@
 
     <com.bzt.inputview.bottominputview.InputView
         android:id="@+id/input"
-        app:hint="你好"
         app:btnColor="@color/colorPrimary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
