@@ -1,6 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 26
@@ -38,14 +36,14 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 //项目主页
-def siteUrl = 'https://github.com/linglongxin24/SQLite'    // project homepage
+def siteUrl = 'https://github.com/qvttter/InputView'    // project homepage
 //项目的版本控制地址
-def gitUrl = 'https://github.com/linglongxin24/SQLite.git' // project git
+def gitUrl = 'https://github.com/qvttter/InputView.git' // project git
 
 //发布到组织名称名字，必须填写
-group = "cn.bluemobi.dylan"
+group = "com.bzt.zl"
 //发布到JCenter上的项目名字，必须填写
-def libName = "AndroidFastDevFrame"
+def libName = "InputView"
 // 版本号，下次更新是只需要更改版本号即可
 version = "1.0"
 /**  上面配置后上传至jcenter后的编译路径是这样的： compile 'cn.bluemobi.dylan:sqlitelibrary:1.0'  **/
@@ -63,7 +61,7 @@ task javadoc(type: Javadoc) {
     options.charSet 'UTF-8'
     options.author true
     options.version true
-    options.links "https://github.com/linglongxin24/FastDev/tree/master/mylibrary/docs/javadoc"
+    options.links "https://github.com/qvttter/InputView/blob/master/README.md"
     failOnError false
 }
 
@@ -91,19 +89,19 @@ install {
         pom {
             project {
                 packaging 'aar'
-                name 'This is a lightweight SQLite database framework'
+                name 'inputView'
                 url siteUrl
                 licenses {
                     license {
-                        name 'This is a lightweight SQLite database framework'
-                        url 'https://github.com/linglongxin24/SQLite'
+                        name 'inputView'
+                        url 'https://github.com/qvttter/InputView'
                     }
                 }
                 developers {
                     developer {
-                        id 'linglongxin24'
-                        name 'dylan'
-                        email 'linglongxin24@163.com'
+                        id 'qvttter'
+                        name 'zhouli'
+                        email 'zhqwo@163.com'
                     }
                 }
                 scm {
@@ -126,9 +124,10 @@ bintray {
     pkg {
         repo = "maven"
         name = libName    //发布到JCenter上的项目名字，必须填写
-        desc = 'This is a lightweight SQLite database framework'    //项目描述
+        desc = 'inputView'    //项目描述
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
         publish = true
     }
+}
